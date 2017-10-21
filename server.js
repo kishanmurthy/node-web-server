@@ -32,7 +32,7 @@ hbs.registerHelper('getCurrentYear', () => {
     // return 'test';
 });
 
-hbs.registerHelper('screemIt', (text) => {
+    hbs.registerHelper('screemIt', (text) => {
     return text.toUpperCase();
 })
 
@@ -68,6 +68,11 @@ app.get('/bad', (request, response) => {
 
 });
 
+app.get('/projects',(request,response)=>{
+    response.render('projects.hbs',{
+        pageTitle: 'Project Page'
+    });
+});
 
 app.listen(port, () => {
     console.log('Server is up in port 3000');
